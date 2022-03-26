@@ -113,72 +113,7 @@ const abi_main = [
     },
     {
         "inputs": [],
-        "name": "MAX_MINT_PER_PRESALE",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "MAX_MINT_PER_PUBLICSALE",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "PRESALE_ACTIVE",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "PRESALE_LIMIT",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "PRESALE_PRICE",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "PUBLIC_SALE_PRICE",
+        "name": "PRICE",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -311,44 +246,12 @@ const abi_main = [
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "name": "mintPerAddress",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "uint256",
                 "name": "numberOfTokens",
                 "type": "uint256"
             }
         ],
-        "name": "mintPresale",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "numberOfTokens",
-                "type": "uint256"
-            }
-        ],
-        "name": "mintPublic",
+        "name": "mint",
         "outputs": [],
         "stateMutability": "payable",
         "type": "function"
@@ -393,25 +296,6 @@ const abi_main = [
                 "internalType": "address",
                 "name": "",
                 "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "name": "presaleWhitelist",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
             }
         ],
         "stateMutability": "view",
@@ -522,12 +406,12 @@ const abi_main = [
     {
         "inputs": [
             {
-                "internalType": "bool",
-                "name": "status",
-                "type": "bool"
+                "internalType": "uint256",
+                "name": "val",
+                "type": "uint256"
             }
         ],
-        "name": "setPresaleStatus",
+        "name": "setPrice",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -548,30 +432,12 @@ const abi_main = [
     {
         "inputs": [
             {
-                "internalType": "address[]",
-                "name": "_addrs",
-                "type": "address[]"
+                "internalType": "uint256",
+                "name": "val",
+                "type": "uint256"
             }
         ],
-        "name": "setWhiteLists",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "user",
-                "type": "address"
-            },
-            {
-                "internalType": "bool",
-                "name": "status",
-                "type": "bool"
-            }
-        ],
-        "name": "setWhitelist",
+        "name": "setSupply",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
