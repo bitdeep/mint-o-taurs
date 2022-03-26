@@ -74,6 +74,7 @@ async function contractStats(){
     $('#PUBLIC_SALE_PRICE').html(`${price} ONE`);
 
     loadLastMintedNft();
+    loadAllMintedNft();
 
 }
 
@@ -83,26 +84,57 @@ async function tokenURI(){
     $('#tokenURI').html(tokenURI);
 }
 
-async function mintPublic(){
-    $('#tokenOfOwnerByIndex').html("Wait... preparing your Taurs...");
-    const val = $('#inputSale').val();
-    const tx = await main.methods.mint(val).send({from: account, value: PRICE});
+async function mintPublic(val){
+    $('#mintInfo').html("Wait... preparing your Taurs...");
+    const tx = await main.methods.mint(val).send({from: account, value: PRICE*val});
     $('#tx').html(tx.transactionHash);
+    $('#mintInfo').html("");
     await loadLastMintedNft();
+    await loadAllMintedNft();
 }
 async function loadLastMintedNft(){
+    $('#MyMints').html("Loading...");
     let balanceOf = await main.methods.balanceOf(account).call();
-    $('#tokenOfOwnerByIndex').html("You don't have any minted Taurs.");
-    if( balanceOf == 0 ) return;
-    --balanceOf;
-    const tokenOfOwnerByIndex = await main.methods.tokenOfOwnerByIndex(account, balanceOf).call();
-    const tokenURI = await main.methods.tokenURI(tokenOfOwnerByIndex).call();
-    console.log('tokenURI', tokenURI);
-    $.get(tokenURI, function(r){
-        const name = r.name;
-        const image = r.image;
-        const html = `<h3 class="text-primary">${name}</h3><img src="${image}" height="480" class="shadow-lg  mb-5 bg-body rounded" />`;
-        $('#tokenOfOwnerByIndex').html(html);
-    });
+    if( balanceOf == 0 ){
+        let html = `<h1>You have no minted Taurs yet.</h1>`;
+        $('#MyMints').html(html);
+        return;
+    }
+    let html = `<h1>My mints (${balanceOf})</h1>`;
+    for( let index = balanceOf-1 ; index >= 0; index -- ) {
+        const tokenOfOwnerByIndex = await main.methods.tokenOfOwnerByIndex(account, index).call();
+        const tokenURI = await main.methods.tokenURI(tokenOfOwnerByIndex).call();
+        $.get(tokenURI, function (r) {
+            const name = r.name;
+            const image = r.image;
+            html += `<div class="box">${name}<br/><img src="${image}" height="320" class="shadow-lg  mb-5 bg-body rounded" /></div>`;
+            $('#MyMints').html(html);
+        });
+    }
+
+
+}
+
+
+async function loadAllMintedNft(){
+    $('#AllMints').html("Wait...");
+    let totalSupply = await main.methods.totalSupply().call();
+    if( totalSupply == 0 ){
+        $('#AllMints').html("No minted Taurs.");
+        return;
+    }
+    let html = `<h1>All Minted ${totalSupply}</h1>`;
+    for( let index = totalSupply-1 ; index >= 0; index -- ) {
+        const tokenURI = await main.methods.tokenURI(index).call();
+        $.get(tokenURI, async function (r) {
+            const name = r.name;
+            const image = r.image;
+            const ownerOf = await main.methods.ownerOf(index).call();
+            const walletId = ownerOf.substr(ownerOf.length - 5);
+            html += `<div class="box">${name} - ...${walletId}<br/><img src="${image}" height="320" class="shadow-lg  mb-5 bg-body rounded" /></div>`;
+            $('#AllMints').html(html);
+        });
+    }
+
 
 }
