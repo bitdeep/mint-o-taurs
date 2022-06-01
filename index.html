@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0">
+<meta name="Distribution" content="Global" />
+<meta name="Robots" content="all" />
+<meta name="Googlebot" content="all" />
+<META NAME="Title" CONTENT="MintO'Taurs" />
+<meta name="classification" content="" />
+<META NAME="Description" CONTENT=""/>
+<meta name="Subject" CONTENT="" />
+<META NAME="Keywords" CONTENT="" />
+<META NAME="copyright" CONTENT="Copyright 2022" />
+<META NAME="Language" CONTENT="English" />
+<title>MintO'Taurs</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+
+<script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+
+<script src="js/abi-main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menumobile.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/rolling.js"></script>
+<script src="js/viewall.js"></script>
+<script src="js/commingsoon.js"></script>
+<script src="js/crossfade.js"></script>
+</head>
+
+<body onload="onLoad(3)">
+	<div class="commingsoon" id="soonsign" style="display: none">June 1st 2022</div>
+	<div class="wrapper">
+
+		
+		<!-- CABEZAL DESKTOP -->
+		<div class="cabezal desktop_only">
+			<div class="taurs_logo cabezal_desktop_boton1s">Home</div>
+			<div class="cabezal_desktop_botonera">
+				<a class="cabezal_desktop_boton1" href="mintotaurs.html">Minting Taurs</a>
+				<a class="cabezal_desktop_boton1" href="viewall.html" >View All</a>
+				<a class="cabezal_desktop_boton1" href="mytaurs.html">My Taurs</a>
+				<a href="Mint_OTaurs_Whitepaper.pdf" target="_blank" class="cabezal_desktop_boton1">Whitepaper</a>
+				<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+				<a href="https://discord.gg/DeArtGallery" target="_blank" class="icon_social icon_discord"></a>
+				<a href="https://medium.com/@MintOTaurs" target="_blank" class="icon_social icon_medium"></a>
+				<a id="nowallet"  class="cabezal_desktop_boton2">Connect Wallet</a>
+				
+				<a href="" class="icon_social cabezal_wallet640"></a>
+			</div>
+		</div>
+			
+		<!-- CABEZAL MOBILE -->
+		<div class="cabezal mobile_only">
+			<div class="taurs_logo"></div>
+			<div class="hamburguesa mobile_only" id="hamburguesa1">☰</div>
+		</div>
+	</div>
+	
+	<!-- DESPLEGABLE MOBILE -->
+	<div class="desplegable_mobile mobile_only" id="menu_mobile" style="top: -100vh">
+		<div class="boton_cerrar" id="cerrar">X</div>
+		<span class="cabezal_desktop_boton1s">Home</span>
+		<a class="cabezal_desktop_boton1" href="mintotaurs.html">Minting Taurs</a>
+		<a class="cabezal_desktop_boton1" href="viewall.html">View All</a>
+		<a class="cabezal_desktop_boton1" href="mytaurs.html">My Taurs</a>
+		<a href="Mint_OTaurs_Whitepaper.pdf" target="_blank" class="cabezal_desktop_boton1">Whitepaper</a>
+		<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+		<a href="https://discord.gg/DeArtGallery" target="_blank" class="icon_social icon_discord"></a>
+		<a href="https://medium.com/@MintOTaurs" target="_blank" class="icon_social icon_medium"></a>
+		<a id="nowallet"  class="cabezal_desktop_boton2">Connect Wallet</a>
+	</div>
+	
+	<!-- CABEZAL FIXED DESKTOP -->
+	<div class="cabezalfixed desktop_only" id="fixeddesktop" style="opacity: 0">
+		<div class="wrapper">
+			<div class="taurs_logo cabezal_desktop_boton1s">Home</div>
+			<div class="cabezal_desktop_botonera">
+				<a class="cabezal_desktop_boton1" href="mintotaurs.html">Minting Taurs</a>
+				<a class="cabezal_desktop_boton1" href="viewall.html">View All</a>
+				<a class="cabezal_desktop_boton1 " href="mytaurs.html">My Taurs</a>
+				<a href="Mint_OTaurs_Whitepaper.pdf" target="_blank" class="cabezal_desktop_boton1">Whitepaper</a>
+				<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+				<a href="https://discord.gg/DeArtGallery" target="_blank" class="icon_social icon_discord"></a>
+				<a href="https://medium.com/@MintOTaurs" target="_blank" class="icon_social icon_medium"></a>
+				<!--<a id="nowallet"  class="cabezal_desktop_boton2">Connect Wallet</a>-->
+				<a href="" class="icon_social cabezal_wallet640"></a>
+			</div>
+		</div>
+	</div>
+		
+	<!-- CABEZAL FIXED MOBILE -->
+	<div class="cabezalfixed mobile_only" id="fixedmobile" style="opacity: 0">
+		<div class="wrapper">
+			<div class="taurs_logo"></div>
+			<div class="hamburguesa mobile_only" id="hamburguesa2">☰</div>
+		</div>
+	</div>
+	
+	<!-- VIEWALL SLIDER -->
+	<div class="viewallslider_container">
+		<div class="viewallslider_img" id="slide1" style="background-image: url('img/viewall-slider1.jpg'); z-index: 1; left: 0"></div>
+		<div class="viewallslider_img" id="slide2" style="background-image: url('img/viewall-slider2.jpg'); z-index: 2; left: 100vw"></div>
+		<div class="viewallslider_img" id="slide3" style="background-image: url('img/viewall-slider3.jpg'); z-index: 2; left: 100vw"></div>
+		<div class="viewallslider_img" id="slide4" style="background-image: url('img/viewall-slider4.jpg'); z-index: 2; left: 100vw"></div>
+	</div>
+	
+	<!-- HERO HEADER -->
+	<div class="fondolaberinto">
+		<div class="fullwidth">
+			<div class="herotext">
+				<h3 class="oculto">Welcome to</h3>
+				<h1 class="oculto">Mint O'Taurs</h1>
+				<h4 class="oculto">A DeArt's product on the Harmony Blockchain</h4>
+				<a href="mintotaurs.html" class="boton oculto">Mint a Taur</a>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- Separador ribbon1 -->
+	<div class="ribbons" id="separador_ribbon1"></div>
+
+	
+	
+	<!-- About the project -->
+	<div class="fondo1">
+		<div class="wrapper">
+		<div class="wrapperflex">
+			<div class="mitad_izq">
+				<h2>About the project</h2>
+				<p>Mint O'Taurs is DeArt's genesis collection. The set consists of 5050 NFTs with cool looking skins, clothes and accessories, market theme and Harmony supporters.</p>
+				<p>The Mint O'Taurs collection will have many additional use cases and features besides being a collectible, such as:</p>
+				<p>· Training (at least 50% chance to upgrate the NFT's rarity).<br>
+				· Access to an exclusive Play to Earn Labyrinth Game.<br>
+				· Access to DeArt's Loyalty Program benefits.<br>
+				· A chance to obtain a very rare NFT from a set of only 30 pieces during The Taurs Awards event in late 2022.</p>
+				<br>
+				<a href="https://medium.com/@MintOTaurs/mint-otaurs-backstory-155c381b1911" target="_blank" class="link_color">Mint O'Taurs Backstory</a>
+			</div>
+			<div class="mitad_der">
+				<div class="about_img" id="rolling_imgs" style="background-image: url('img/rolling/Bronze_2.jpg')"></div>
+			</div>
+		</div>
+		</div>
+		<div class="wrapper">
+			<div class="justificado">
+				<div class="mytaurs_owned mytaurs_none">NFTiers:</div>
+				<div class="mytaurs_owned mytaurs_common">Common</div>
+				<div class="mytaurs_owned mytaurs_bronze">Bronze</div>
+				<div class="mytaurs_owned mytaurs_silver">Silver</div>
+				<div class="mytaurs_owned mytaurs_gold">Gold</div>
+				<div class="mytaurs_owned mytaurs_diamond">Diamond</div>
+				<div class="justificado-end desktop_only no_desktop_small"></div>
+			</div>
+			<br><br>
+		</div>
+	</div>
+	
+	<!-- Separador ribbon2 -->
+	<div class="ribbons" id="separador_ribbon2"></div>
+	
+	<!-- Training -->
+	<div class="fondo2">
+		<div class="wrapper">
+			<div class="tercio">
+				<h2>Train your NFTs for a chance to upgrade their rarity.</h2>
+				<a href="https://medium.com/@MintOTaurs/mint-otaurs-training-system-b60363c7a1e2" target="_blank" class="link_color">Learn more</a>
+			</div>
+			<div class="dostercios">
+				<div class="img_pretraining"></div>
+				<div class="training_arrow">&gt;</div>
+				<div class="img_posttraining"></div>
+				<div class="training_text">
+					Normal training = 50% chance to upgrade<br><br class="mobile_only">Intensive training = 100% chance to upgrade
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Separador ribbon3 -->
+	<div class="ribbons" id="separador_ribbon3"></div>
+	
+	<!-- Labyrinth Quest -->
+	<div class="fondo_quest">
+		<div class="wrapper">
+		<div class="wrapperflex">
+			<div class="mitad_izq">
+				<h2>Labyrinth Quest</h2>
+				<p>Exclusive Play 2 Earn game for the Mint O'Taurs holders where players need to find the Minotaur at the center of the Labyrinth before they run out of time. A total price of 20.000 ONE would be distributed among top players.</p>
+				<a href="https://medium.com/@MintOTaurs/mint-otaurs-labyrinth-game-872270b0376e" target="_blank" class="link_color">Learn more</a>
+			</div>
+			<div class="mitad_der">
+				<div class="game_img" style="background-image: url('img/keyboard.png')"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<!-- Separador ribbon1 -->
+	<div class="ribbons" id="separador_ribbon1"></div>
+	
+	<!-- Taurs Awards -->
+	<div class="fondo_awards">
+		<div class="wrapper">
+		<div class="wrapperflex">
+			<div class="mitad_izq">
+				<h2>Taurs Awards</h2>
+				<p>The Taurs Awards will be a special event for the Mint O'Taurs community which will take place in late 2022.</p>
+				<p>During this event, some Mint O'Taurs holders will be awarded with the Taur Statue, the rarest NFT of the whole collection.</p>
+				<a href="https://medium.com/@MintOTaurs/mint-o-taurs-taurs-awards-570831fc6fa" target="_blank" class="link_color">Learn more</a>
+			</div>
+			<div class="mitad_der">
+				<div class="awards_img">
+					<div class="awards_img1" id="crossfade1" style="opacity: 0; background-image: url('img/trophy_Minto_FINAL.jpg')"></div>
+					<div class="awards_img2" id="crossfade2" style="opacity: 0; background-image: url('img/Award 2.png')"></div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<!-- Separador ribbon2 -->
+	<div class="ribbons" id="separador_ribbon2"></div>
+	
+	<!-- Roadmap -->
+	<div class="fondo_roadmap">
+		<div class="wrapper">
+			<div class="training_text">
+				<h2>Roadmap</h2>
+			</div>
+			<div class="roadmap_all">
+				<div class="roadmap_left">
+					<div class="roadmap_module roadmapQ1"><img src="img/transparent.gif" alt="Q1 Art Development and Marketing Campaign"/></div>
+					<div class="roadmap_module roadmapB desktop_only"></div>
+					<div class="roadmap_module roadmapA desktop_only"></div>
+					<div class="roadmap_module roadmapQ2"><img src="img/transparent.gif" alt="Q2 Collection Launch and Community Contests"/></div>
+				</div>
+				<div class="roadmap_right">
+					<div class="roadmap_module roadmapQ3"><img src="img/transparent.gif" alt="Q3 Training Feature"/></div>
+					<div class="roadmap_module roadmapD desktop_only"></div>
+					<div class="roadmap_module roadmapC desktop_only"></div>
+					<div class="roadmap_module roadmapQ4"><img src="img/transparent.gif" alt="Q4 Labyrinth Game and Taurs Awards"/></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Separador ribbon1 -->
+	<div class="ribbons" id="separador_ribbon1"></div>
+	
+	<!-- Listed on -->
+	<div class="fondo_roadmap">
+		<div class="wrapper">
+			<div class="training_text">
+				<h2>Listed on:</h2>
+			</div>
+			<a href="https://metatr.one/" target="_blank"><img class="listed" src="img/Metatrone.svg"/></a>
+		</div>
+		<br><br><br><br><br><br>
+	</div>
+	
+	<!-- Separador ribbon2 -->
+	<div class="ribbons" id="separador_ribbon2"></div>
+	
+	<!-- FAQ -->
+	<div class="fondo3">
+		<div class="wrapper">
+			<div class="training_text">
+				<h2>FAQ</h2>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(1)">When is the Mint O'Taurs collection going to be launched?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow1">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer1" style="height: 0">
+					June 1st 2022 is the official launch date for the Mint O’Taurs collection. Stay tuned!
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(2)">What is the minting price going to be?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow2">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer2" style="height: 0">
+					800 ONE per piece.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(3)">How much is the royalty fee?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow3">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer3" style="height: 0">
+					2.5%.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(4)">What are the compatible wallets?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow4">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer4" style="height: 0">
+					Metamask, Trust Wallet, Wallet Connect
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(5)">How many pieces can I mint?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow5">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer5" style="height: 0">
+					As many as you want. However, you can only mint 1, 2, 5 or 10 pieces at once. There are a total of 5050.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(6)">When is the Training System going to be launched?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow6">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer6" style="height: 0">
+					The Training System will be launched during the Q3 2022. Stay tuned for more details.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(7)">How does the Rarity System work?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow7">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer7" style="height: 0">
+					The Rarity system is based on what we like to call NFTiers: Common, Bronze, Silver, Gold and Diamond (from lower to higher). The Rarity it’s upgradable, has utility and might be the reason you earn an Award.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(8)">If the rarity does not depend on the parts, what about them?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow8">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer8" style="height: 0">
+					The parts of the NFTs will be relevant during the Taurs Awards Event in late 2022.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(9)">When is the Labyrinth Game going to be released?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow9">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer9" style="height: 0">
+					The Labyrinth Game will be launched during the Q4 of 2022. Stay tuned for more details.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(10)">Is the Taurs Awards Event the final feature this collection will have?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow10">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer10" style="height: 0">
+					No. Holding at least one Mint O’Taur will automatically make the owner part of DeArt’s <a href="https://medium.com/@MintOTaurs/mint-o-taurs-deart-s-loyalty-program-4cf15cc91315" target="_blank" class="link_color">Loyalty Program</a>, which includes several benefits that will come along with the launch of the upcoming collections.
+				</div>
+			</div>
+			<div class="FAQ_question_module">
+				<div class="FAQ_question" onclick="toggleAnswer(11)">What is DeArt Gallery?</div>
+				<div class="FAQ_question_arrow" id="FAQ_arrow11">&gt;</div>
+				<div class="FAQ_answer" id="FAQ_answer11" style="height: 0">
+					DeArt Gallery is the NFT Studio behind the Mint O’Taurs collection. Visit <a href="https://deart.gallery" target="_blank" class="link_color">DeArt’s Website</a> to learn more about its plan to launch many more NFT collections and community Platforms in the Harmony Blockchain.
+				</div>
+			</div>
+			<div class="FAQ_question_module"></div>
+			<br><br><br><br>
+		</div>
+	</div>
+	
+	<!-- FOOTER -->
+	<div class="fondo_pie">
+		<div class="wrapper">
+			<div class="justificado">
+				<div class="pie_contract">
+					<span class="pie_contract1">Mint O'Taurs Minting contract:</span><br>
+					<a id="link_contract" target="_blank" class="pie_contract2"><code ID="CONTRACT">-</code></a><br>
+				</div> 
+				<div class="pie_socials">
+					<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+					<a href="https://discord.gg/DeArtGallery" target="_blank" class="icon_social icon_discord"></a>
+					<a href="https://medium.com/@MintOTaurs" target="_blank" class="icon_social icon_medium"></a>
+				</div> 
+				<div class="pie_powered">
+					<span class="poweredby">Powered by</span><br>
+					<a href="https://deart.gallery" target="_blank"><img class="poweredimg" src="img/deart-logo-white.svg"/></a>
+				</div> 
+				<a class="pie_harmony" href="https://www.harmony.one/" target="_blank"> Harmony</a> 
+				<div class="justificado-end"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

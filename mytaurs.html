@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0">
+<meta name="Distribution" content="Global" />
+<meta name="Robots" content="all" />
+<meta name="Googlebot" content="all" />
+<META NAME="Title" CONTENT="MintO'Taurs - View All" />
+<meta name="classification" content="" />
+<META NAME="Description" CONTENT=""/>
+<meta name="Subject" CONTENT="" />
+<META NAME="Keywords" CONTENT="" />
+<META NAME="copyright" CONTENT="Copyright 2022" />
+<META NAME="Language" CONTENT="English" />
+<title>MintO'Taurs - View All</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+
+<script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/abi-main.js"></script>
+<script src="js/menumobile.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/viewall.js"></script>
+</head>
+
+<body onload="onLoad(1)">
+	<div class="fondodefault">
+		<div class="wrapper">
+			<!-- CABEZAL DESKTOP -->
+			<div class="cabezal desktop_only">
+				<a href="index.html" class="taurs_logo cabezal_desktop_boton1">Home</a>
+				<div class="cabezal_desktop_botonera">
+					<a href="mintotaurs.html" class="cabezal_desktop_boton1">Minting Taurs</a>
+										<a href="viewall.html" class="cabezal_desktop_boton1">View All</a>
+
+					<a href="mytaurs.html" class="cabezal_desktop_boton1">My Taurs</a>
+					<a href="Mint_OTaurs_Whitepaper.pdf" class="cabezal_desktop_boton1">Whitepaper</a>
+					<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+					<a href="https://t.me/+73kyiAOvQtg2ZGIx" target="_blank" class="icon_social icon_telegram"></a>
+					<a href="" target="_blank" class="icon_social icon_medium"></a>
+					<a href="" id="nowallet" class="cabezal_desktop_boton2">Connect Wallet</a>
+					<a href="" class="icon_social cabezal_wallet640"></a>
+				</div>
+			</div>
+			
+			<!-- CABEZAL MOBILE -->
+			<div class="cabezal mobile_only">
+				<div class="taurs_logo"></div>
+				<div class="hamburguesa mobile_only" id="hamburguesa1">☰</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- DESPLEGABLE MOBILE -->
+	<div class="desplegable_mobile mobile_only" id="menu_mobile" style="top: -100vh">
+		<div class="boton_cerrar" id="cerrar">X</div>
+		<a href="index.html" class="cabezal_desktop_boton1">Home</a>
+		<a href="mintotaurs.html" class="cabezal_desktop_boton1">Minting Taurs</a>
+							<a href="viewall.html" class="cabezal_desktop_boton1">View All</a>
+
+		<a href="mytaurs.html" class="cabezal_desktop_boton1">My Taurs</a>
+		<a href="Mint_OTaurs_Whitepaper.pdf" class="cabezal_desktop_boton1">Whitepaper</a>
+		<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+		<a href="https://t.me/+73kyiAOvQtg2ZGIx" target="_blank" class="icon_social icon_telegram"></a>
+		<a href="" target="_blank" class="icon_social icon_medium"></a>
+		<a href="" id="nowallet"  class="cabezal_desktop_boton2">Connect Wallet</a>
+	</div>
+	
+	<!-- CABEZAL FIXED DESKTOP -->
+	<div class="cabezalfixed desktop_only" id="fixeddesktop" style="opacity: 0">
+		<div class="wrapper">
+			<a href="index.html" class="taurs_logo cabezal_desktop_boton1">Home</a>
+			<div class="cabezal_desktop_botonera">
+				<a href="mintotaurs.html" class="cabezal_desktop_boton1">Minting Taurs</a>
+									<a href="viewall.html" class="cabezal_desktop_boton1">View All</a>
+
+				<a href="mytaurs.html" class="cabezal_desktop_boton1">My Taurs</a>
+				<a href="Mint_OTaurs_Whitepaper.pdf" class="cabezal_desktop_boton1">Whitepaper</a>
+				<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+				<a href="https://t.me/+73kyiAOvQtg2ZGIx" target="_blank" class="icon_social icon_telegram"></a>
+				<a href="" target="_blank" class="icon_social icon_medium"></a>
+				<!--<a id="nowallet"  class="cabezal_desktop_boton2">Connect Wallet</a>-->
+				<a href="" class="icon_social cabezal_wallet640"></a>
+			</div>
+		</div>
+	</div>
+		
+	<!-- CABEZAL FIXED MOBILE -->
+	<div class="cabezalfixed mobile_only" id="fixedmobile" style="opacity: 0">
+		<div class="wrapper">
+			<div class="taurs_logo"></div>
+			<div class="hamburguesa mobile_only" id="hamburguesa2">☰</div>
+		</div>
+	</div>	
+
+
+
+	
+	<!-- MYTAURS HEADER -->
+	<h1 id="myTaurs">My Taurs</h1>			
+	<div class="mytaurs_header">
+		<div class="justificado">					
+			<div id="logo_common1" class="mytaurs_owned mytaurs_common">0</div>
+			<div id="logo_bronze1" class="mytaurs_owned mytaurs_bronze">0</div>
+			<div id="logo_silver1" class="mytaurs_owned mytaurs_silver">0</div>
+			<div id="logo_gold1" class="mytaurs_owned mytaurs_gold">0</div>
+			<div id="total_minted1" class="mytaurs_owned mytaurs_total">Total: 0</div>
+			<div class="justificado-end"></div>
+		</div>
+	</div>
+
+	<!-- GO UP -->
+	<div class="goup" id="goup" onclick="GoToTop()" style="display: none">&#62;</div>
+	
+
+	<div class="fondodefault" id="container">
+
+		<div class="wrapper">
+			<div class="justificado" id="taurscontainer1">
+				<div class="result_dummy"></div> 
+				<div class="result_dummy"></div> 
+				<div class="result_dummy"></div> 
+				<div class="result_dummy"></div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<!-- Separador ribbon1 -->
+	<div class="ribbons" id="separador_ribbon1"></div>
+	
+	<!-- FOOTER -->
+	<div class="fondo_pie">
+		<div class="wrapper">
+			<div class="justificado">
+				<div class="pie_contract">
+					<span class="pie_contract1">Mint O'Taurs Minting contract:</span><br>
+					<a id="link_contract" target="_blank" class="pie_contract2"><code ID="CONTRACT">-</code></a><br>
+				</div> 
+				<div class="pie_socials">
+					<a href="https://twitter.com/mintotaurs" target="_blank" class="icon_social icon_twitter"></a>
+					<a href="https://t.me/+73kyiAOvQtg2ZGIx" target="_blank" class="icon_social icon_telegram"></a>
+					<a href="" target="_blank" class="icon_social icon_medium"></a>
+				</div> 
+				<div class="pie_powered">
+					<span class="poweredby">Powered by</span><br>
+					<img class="poweredimg" src="img/deart-logo-white.svg"/>
+				</div> 
+				<div class="pie_harmony">
+					Harmony
+				</div> 
+				<div class="justificado-end"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
