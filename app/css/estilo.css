@@ -1,0 +1,2336 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Miriam Libre', sans-serif;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	overflow-x: hidden;
+	text-align: center;
+	background-color: #080E1E;
+}
+
+.commingsoon {
+	position: fixed;
+	background-color: #080E1E;
+	border-radius: 10px;
+	border: 5px solid #828282;
+	color: white;
+	font-size: 1em;
+	line-height: 1.2em;
+	padding: 5px 10px 5px 10px;
+	z-index: 300;
+}
+
+.wrapper {
+	width: 84%;
+	display: inline-block;
+	text-align: center;
+}
+
+.wrapperflex {
+	width: 100%;
+	display: flex;
+}
+
+.oculto {
+	opacity: 0;
+}
+
+.desktop_only {
+}
+
+.fondodefault {
+	width: 100vw;
+	display: block;
+	margin: 0;
+	background-color: #080E1E;
+}
+
+/* *************** */
+/* *** CABEZAL *** */
+/* *************** */
+
+.cabezal {
+	width: 100%;
+	height: 80px;
+	position: relative;
+	padding-top: 15px;
+}
+
+.cabezalfixed {
+	width: 100%;
+	height: 65px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 15px;
+	background-color: #00072E;
+	z-index: 100;
+	-ms-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	transition: opacity 0.5s ease-out;
+}
+
+.taurs_logo {
+	width: 180px;
+	height: 65px;
+	line-height: 65px;
+	display: inline-block;
+	float: left;
+	background-image: url('../img/mintotaurs-logo.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-left: 0;
+	text-align: left;
+	padding-left: 75px;
+}
+
+.cabezal_desktop_botonera {
+	display: inline-block;
+	float: right;
+	padding-bottom: 20px;
+	line-height: 65px;
+	vertical-align: middle;
+}
+
+.cabezal_desktop_boton1 {
+	font-size: 1em;
+	font-weight: 400;
+	color: white;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+.cabezal_desktop_boton1:hover {
+	color: #666666;
+}
+
+.cabezal_desktop_boton1s {
+	font-size: 1em;
+	font-weight: 700;
+	color: white;
+	margin-left: 40px;
+}
+
+.cabezal_desktop_boton_ok {
+	font-size: 1em;
+	font-weight: 400;
+	color: #1c7dba;
+	padding: 5px 10px 5px 10px;
+	background-color: white;
+	border-radius: 10px;
+	text-decoration: none;
+	margin-left: 40px;
+	border: 1px solid white;
+}
+
+.cabezal_desktop_boton2 {
+	font-size: 1em;
+	font-weight: 400;
+	color: #011E30;
+	padding: 5px 10px 5px 10px;
+	background-color: white;
+	border-radius: 10px;
+	text-decoration: none;
+	margin-left: 40px;
+	border: 1px solid white;
+}
+
+.cabezal_desktop_boton2:hover {
+	background-color: transparent;
+	color: white;
+}
+
+.cabezal_wallet640 {
+	display: none;
+}
+
+.icon_social {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	margin-left: 20px;
+	margin-bottom: -12px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.icon_discord {
+	background-image: url('../img/Discord Icon.svg');
+}
+
+.icon_twitter {
+	background-image: url('../img/Twitter Icon.svg');
+}
+
+.icon_telegram {
+	background-image: url('../img/Telegram Icon.svg');
+}
+
+.icon_medium {
+	background-image: url('../img/Medium Icon.svg');
+}
+
+/* ******************* */
+/* *** HERO HEADER *** */
+/* ******************* */
+
+.fondolaberinto {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background-color: #080E1E;
+	background-image: url('../img/mintotaurs-maze.svg');
+	background-position: top center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.fullwidth {
+	display: inline-block;
+	/*position: relative;*/
+	margin: 20px 0 20px 0;
+	width: 100%;
+}
+
+.herotext {
+	margin-top: 50vh;
+}
+
+.hero_img {
+	display: inline-block;
+	width: 100%;
+	height: 500px;
+	background-image: url('../img/circle.svg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.align_izq {
+	text-align: left;
+}
+
+.boton {
+	font-size: 1.3em;
+	padding: 12px 25px 13px 25px;
+	color: #C4C4C4;
+	background-color: #00072E;
+	border: 10px solid #C4C4C4;
+	border-radius: 20px;
+}
+
+.boton:hover {
+	color: #00072E;
+	background-color: #C4C4C4;
+}
+
+
+/* ************** */
+/* *** TEXTOS *** */
+/* ************** */
+
+
+.text-white {
+	color: white;
+}
+
+h1 {
+	color: white;
+	font-size: 5em;
+	line-height: 1em;
+	font-weight: 700;
+	margin-bottom: -5px;
+}
+
+h2 {
+	color: white;
+	font-size: 3em;
+	line-height: 1.2em;
+	font-weight: 400;
+}
+
+h3 {
+	color: white;
+	font-size: 2em;
+	line-height: 1.2em;
+	font-weight: 400;
+	margin-bottom: -25px;
+}
+
+h4 {
+	color: white;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+span {
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	font-weight: 400;
+	color: white;
+	max-width: 640px;
+	text-align: left;
+}
+
+a {
+	color: white;
+	font-size: 1em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #999999;
+}
+
+.grisado {
+	color: #333333;
+}
+
+/* ************ */
+/* *** HOME *** */
+/* ************ */
+
+.ribbons {
+	display: block;
+	width: 100vw;
+	height: 40px;
+	margin: 0;
+	background-position: center;
+	background-size: contain;
+	background-repeat: repeat;
+}
+
+#separador_ribbon1 {
+	background-image: url('../img/ribbon1.svg');
+}
+
+#separador_ribbon2 {
+	background-image: url('../img/ribbon2.svg');
+}
+
+#separador_ribbon3 {
+	background-image: url('../img/ribbon3.svg');
+}
+
+.fondo1 {
+	display: block;
+	margin: 0;
+	width: 100vw;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/background1.svg');
+}
+
+.fondo2 {
+	display: block;
+	margin: 0;
+	width: 100vw;
+	background-position: left bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/background2.svg');
+}
+
+.fondo3 {
+	display: block;
+	margin: 0;
+	width: 100vw;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/background3.svg');
+}
+
+.fondo_awards{
+	display: block;
+	margin: 0;
+	width: 100vw;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/Awards background.jpg');
+}
+
+.fondo_quest {
+	display: block;
+	margin: 0;
+	width: 100vw;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/labytinth.jpg');
+}
+
+.mitad_izq {
+	display: inline-block;
+	width: 49%;
+	text-align: left;
+	vertical-align: top;
+}
+
+.mitad_der {
+	flex-grow: 1;
+	text-align: right;
+}
+
+.mitad_der2 {
+	display: inline-block;
+	width: 49%;
+	text-align: center;
+}
+
+.about_img {
+	display: inline-block;
+	width: 600px;
+	height: 600px;
+	border: 4px solid #828282;
+	border-radius: 20px;
+	margin: 20px 0 20px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.game_img {
+	display: inline-block;
+	width: 600px;
+	height: 600px;
+	margin: 20px 0 20px 0;
+	background-position: center;
+	background-size: 50% auto;
+	background-repeat: no-repeat;
+}
+
+.awards_img {
+	display: inline-block;
+	position: relative;
+	width: 608px;
+	height: 608px;
+	margin: 20px 0 20px 0;
+}
+
+.awards_img1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600px;
+	height: 600px;
+	border: 4px solid #828282;
+	border-radius: 20px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: opacity 1s;
+}
+
+.awards_img2 {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 600px;
+	height: 600px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: opacity 1s;
+}
+
+.tercio {
+	display: inline-block;
+	width: 30%;
+	margin: 30px 0 30px 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.dostercios {
+	display: inline-block;
+	width: 68%;
+	margin: 30px 0 30px 0;
+	vertical-align: top;
+}
+
+.training_icon {
+	display: inline-block;
+	width: 100%;
+	height: 60px;
+	background-position: left center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('../img/Gym logo.svg');
+}
+
+.img_pretraining {
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	border: 4px solid #828282;
+	border-radius: 20px;
+	margin: 20px 0 20px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/Normal Body.jpg');
+	vertical-align: middle;
+}
+
+.img_posttraining {
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	border: 4px solid #828282;
+	border-radius: 20px;
+	margin: 20px 0 20px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/Muscle Body.jpg');
+	vertical-align: middle;
+}
+
+.training_arrow {
+	display: inline-block;
+	color: #828282;
+	font-size: 4em;
+	line-height: 400px;
+	margin: 20px;
+	vertical-align: middle;
+}
+
+.training_text {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: #828282;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 10px 0 70px 0;
+}
+
+.fondo_roadmap {
+	width: 100vw;
+	margin: 0;
+	background-color: #080E1E;
+	text-align: center;
+}
+
+.roadmap_all {
+	display: inline-block;
+	border: 2px solid #999999;
+	padding: 0;
+	margin-bottom: 80px;
+}
+
+.roadmap_left {
+	display: inline-block;
+	width: 668px;
+	height: 668px;
+	margin: 0;
+	float: left;
+}
+
+.roadmap_right {
+	display: inline-block;
+	width: 668px;
+	height: 668px;
+	margin: 0;
+	float: left;
+}
+
+.roadmap_module {
+	display: inline-block;
+	width: 334px;
+	height: 334px;
+	margin: 0;
+	float: left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.roadmapQ1 {
+	background-image: url('../img/mazeQ1.svg');
+}
+
+.roadmapQ2 {
+	background-image: url('../img/mazeQ2.svg');
+}
+
+.roadmapQ3 {
+	background-image: url('../img/mazeQ3.svg');
+}
+
+.roadmapQ4 {
+	background-image: url('../img/mazeQ4.svg');
+}
+
+.roadmapA {
+	background-image: url('../img/mazeA.svg');
+}
+
+.roadmapB {
+	background-image: url('../img/mazeB.svg');
+}
+
+.roadmapC {
+	background-image: url('../img/mazeC.svg');
+}
+
+.roadmapD {
+	background-image: url('../img/mazeD.svg');
+}
+
+.FAQ_question_module {
+	display: inline-block;
+	width: 100%;
+	border-top: 2px solid white;
+	padding-top: 15px;
+	margin-bottom: 10px;
+}
+
+.FAQ_question {
+	display: inline-block;
+	margin: 0;
+	float: left;
+	color: white;
+	font-size: 1.6em;
+	line-height: 1.2em;
+	font-weight: 700;
+	cursor: pointer;
+	text-align: left;
+}
+
+.FAQ_question_arrow {
+	display: inline-block;
+	margin: 0;
+	float: right;
+	color: white;
+	font-size: 2em;
+	line-height: 1.2em;
+	font-weight: 700;
+}
+
+.FAQ_answer {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	float: left;
+	color: white;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	font-weight: 400;
+	text-align: left;
+}
+
+.listed {
+	width: 120px;
+	height: 120px;
+}
+
+/* *********** */
+/* *** PIE *** */
+/* *********** */
+
+.fondo_pie {
+	width: 100%;
+	margin: 0;
+	background-color: #00072E;
+	padding: 40px 0 40px 0;
+}
+
+.justificado {
+	display: block;
+	width: 100%;
+	text-align: justify;
+	vertical-align: middle;
+	text-align-last: start;
+}
+
+.justificado-end {
+	display: inline-block;
+	width: 100%;
+	height: 10px;
+}
+
+.pie_contract {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1.2em;
+	font-weight: 400;
+	margin-right: 20px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+.pie_contract1 {
+	color: white;
+}
+
+.pie_contract2 {
+	color: #FFAB00;
+	text-decoration: none;
+}
+
+.pie_contract2:hover {
+	color: #CCAB00;
+}
+
+.pie_socials {
+	display: inline-block;
+	margin-right: 20px;
+	height: 34px;
+	vertical-align: middle;
+}
+
+.pie_powered {
+	display: inline-block;
+	margin-right: 20px;
+	height: 80px;
+	vertical-align: middle;
+}
+
+.poweredby {
+	color: white;
+	font-size: 0.8em;
+	line-height: 1em;
+	font-weight: 400;
+	padding-left: 10px;
+}
+
+.poweredimg {
+	width: 160px;
+}
+
+.pie_harmony {
+	display: inline-block;
+	padding-left: 50px;
+	padding-top: 5px;
+	height: 35px;
+	vertical-align: middle;
+	color: white;
+	font-size: 1.4em;
+	line-height: 1.6em;
+	font-weight: 400;
+	background-image: url('../img/9AE26091.png');
+	background-size: contain;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+/* *********** */
+/* MINT A TAUR */
+/* *********** */
+
+.minteo_img {
+	background-color: #080E1E;
+	border: 2px solid #A4A4A4;
+	width: 350px;
+	height: 350px;
+	text-align: center;
+	color: white;
+	font-size: 20em;
+	line-height: 350px;
+	margin: 30px;
+	box-shadow: 0 0 50px black;
+}
+
+.mint_spacer {
+	margin-top: 100px;
+}
+
+.mint_x1 {
+	display: inline-block;
+	width: 360px;
+	background-color: #00072E;
+	border: 10px solid #C4C4C4;
+	border-radius: 20px;
+	padding: 14px 0 15px 0;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.2em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.mint_x1:hover {
+	background-color: #C4C4C4;
+	color: #00072E;
+}
+
+.mint_x2 {
+	display: inline-block;
+	width: 40px;
+	background-color: #FFAB00;
+	border: 10px solid #C4C4C4;
+	border-radius: 20px;
+	padding: 14px 40px 15px 20px;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.2em;
+	text-align: center;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+.mint_x2:hover {
+	background-color: #00072E;
+}
+
+.mint_x5 {
+	display: inline-block;
+	width: 40px;
+	background-color: #FF6B00;
+	border: 10px solid #C4C4C4;
+	border-radius: 20px;
+	padding: 14px 40px 15px 20px;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.2em;
+	text-align: center;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+.mint_x5:hover {
+	background-color: #00072E;
+}
+
+.mint_x10 {
+	display: inline-block;
+	background-color: #FF2E00;
+	border: 10px solid #C4C4C4;
+	border-radius: 20px;
+	padding: 14px 20px 15px 20px;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.2em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.mint_x10:hover {
+	background-color: #00072E;
+}
+
+.link_color {
+	color: #FFAB00;
+}
+
+.minted_module {
+	display: inline-block;
+	width: 24%;
+	height: 300px;
+	vertical-align: top;
+	text-align: center;	
+}
+
+.minted_module img {
+	width: 50%;
+	height: auto;
+}
+
+/* ******** */
+/* MY TAURS */
+/* ******** */
+
+.mytaurs_header {
+	margin: 80px 10% 20px 10%;
+	width: 78%;
+	padding-bottom: 30px;
+}
+
+.mytaurs_owned {
+	display: inline-block;
+	/*width: 90px;*/
+	height: 60px;
+	color: white;
+	font-size: 1.4em;
+	line-height: 60px;
+	padding-left: 80px;
+	background-position: left center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.mytaurs_common {
+	background-image: url('../img/Common.svg');
+}
+
+.mytaurs_bronze {
+	background-image: url('../img/Bronze.svg');
+}
+
+.mytaurs_silver {
+	background-image: url('../img/Silver.svg');
+}
+
+.mytaurs_gold {
+	background-image: url('../img/Gold.svg');
+}
+
+.mytaurs_diamond {
+	background-image: url('../img/Diamond.svg');
+}
+
+.mytaurs_none {
+	color: #0099CC;
+	padding-left: 0;
+}
+
+.mytaurs_total {
+	color: #FFAB00;
+}
+
+.separador_mytaurs {
+	width: 100%;
+	border-top: 1px solid #909090;
+	margin: 0 0 20px 0;
+}
+
+.sliderleft {
+	display: inline-block;
+	width: 8vw;
+	cursor: pointer;
+	color: #909090;
+	font-size: 6em;
+	line-height: 36vw;
+	vertical-align: top;
+	user-select: none;
+}
+
+.sliderleft:hover {
+	color: white;
+}
+
+.sliderright {
+	display: inline-block;
+	width: 8vw;
+	cursor: pointer;
+	color: #909090;
+	font-size: 6em;
+	line-height: 36vw;
+	vertical-align: top;
+	user-select: none;
+}
+
+.sliderright:hover {
+	color: white;
+}
+
+.slidercontainer {
+	width: 82vw;
+	height: 37vw;
+	display: inline-block;
+	position: relative;
+	overflow-x: hidden;
+	vertical-align: top;
+	z-index: 5;
+}
+
+.sliderbody {
+	display: block;
+	position: absolute;
+	height: 36vw;
+	top: 0;
+	white-space: nowrap;
+	transition: left 1s;
+}
+
+.slidermodule {
+	display: inline;
+	width: auto;
+	height: 36vw;
+	line-height: 36vw;
+	margin-right: 2vw;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.slideritem {
+	display: inline-block;
+	margin: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 20px;
+	border: 2px solid #909090;
+	vertical-align: middle;
+	transition: width 1s, height 1s;
+}
+
+.sliderinfocontainer {
+	display: inline-block;
+	width: 80%;
+	border-radius: 40px;
+	border: 2px solid #909090;
+	margin-top: -40px;
+	margin-bottom: 40px;
+	padding: 50px 10px 10px 10px;
+	z-index: 1;
+	text-align: left;
+}
+
+.sliderinfonumbers {
+	display: block;
+	color: #FFAB00;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.sliderinfotraits {
+	display: inline-block;
+	width: 18%;
+	margin: 5px 10px 5px 10px;
+	color: white;
+	text-align: left;
+}
+
+#infocontract {
+	width: 38%;
+}
+
+/* ******** */
+/* VIEW ALL */
+/* ******** */
+
+.viewallslider_container {
+	display: block;
+	margin: 0;
+	width: 100vw;
+	height: 33.333vw;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 4px solid #828282;
+	border-top: 4px solid #828282;
+}
+
+.viewallslider_img {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 33.333vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: left 0.5s;
+}
+
+.filtros {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin: 20px 0 20px 0;
+	border-top: 1px solid #909090;
+	border-bottom: 1px solid #909090;
+	padding: 10px 0 15px 0;
+	vertical-align: middle;
+}
+
+.filtros a {
+	margin-right: 30px;
+}
+
+.checkcontainer {
+	display: inline-block;
+	color: white;
+	position: relative;
+	padding-left: 45px;
+	height: 35px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.oricheck {
+  visibility: hidden;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  border-radius: 40px;
+  border: 2px solid #080E1E;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkcontainer:hover .oricheck ~ .checkmark {
+  border: 2px solid #333333;
+}
+
+.checkcontainer .oricheck:checked ~ .checkmark {
+  border: 2px solid white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkcontainer .oricheck:checked ~ .checkmark:after {
+  display: inline-block;
+}
+
+.busqueda_texto {
+	display: inline-block;
+	border-radius: 10px;
+	border: 1px solid white;
+	padding: 5px;
+	width: 120px;
+	height: 20px;
+	background-color: transparent;
+	color: white;
+	vertical-align: bottom;
+}
+
+.paginas {
+	display: block;
+	width: 100%;
+	margin: 0 0 20px 0;
+	padding: 10px 0 10px 0;
+	border-top: 1px solid #909090;
+	border-bottom: 1px solid #909090;
+	color: white;
+}
+
+.result_module {
+	display: inline-block;
+	position: relative;
+	width: 18%;
+	border: 2px solid #909090;
+	border-radius: 20px;
+	background-position: center top;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: white;
+	font-size: 2em;
+	padding: 20% 0 1% 10px;
+	margin-bottom: 20px;
+	transition: background-size, 0.3s;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.result_module:hover {
+	background-size: 102% auto;
+}
+
+.result_dummy {
+	display: inline-block;
+	position: relative;
+	width: 18%;
+	height: 1px;
+	border: 2px solid rgba(0,0,0,0);
+	padding: 0 0 0 10px;
+}
+
+.result_popup {
+	display: block;
+	position: fixed;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	line-height: 100vh;
+}
+
+.result_popup_close {
+	float: right;
+	position: relative;
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	margin: -15px -15px 0 0;
+	border: 2px solid #909090;
+	background-color: #00072E;
+	color: #909090;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.result_popup_close:hover {
+	color: #00072E;
+	background-color: #909090;
+}
+
+.result_popup_container {
+	display: inline-block;
+	width: 800px;
+	height: 500px;
+	border: 2px solid #909090;
+	border-radius: 20px;
+	background-color: #00072E;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.result_thumb {
+	display: inline-block;
+	margin: 10px;
+	width: 480px;
+	height: 480px;
+	border-radius: 15px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.result_info {
+	display: inline-block;
+	width: 280px;
+	height: 480px;
+	margin-top: 10px;
+	margin-right: 10px;
+	color: white;
+	line-height: 1.2em;
+	float: right;
+}
+
+.resultinfotraits {
+	display: block;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.goup {
+	position: fixed;
+	bottom: 10vh;
+	right: 0;
+	width: 40px;
+	height: 60px;
+	transform: rotate(270deg);
+	color: white;
+	background-color: #0099CC;
+	font-size: 1.5em;
+	z-index: 40;
+}
+
+.goup:hover {
+	color: #909090;
+}
+
+.viewdetails {
+	display: inline-block;
+	color: #FFAB00;
+	font-size: 0.4em;
+	text-align: right;
+	cursor: pointer;
+}
+
+/* WALLET */
+.nowallet {
+	display: block;
+	width: 100%;
+	height: 600px;
+	background-image: url('../img/no-wallet.svg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+/* ************************************************************************* */
+
+.mobile_only {
+	display: none;
+}
+
+/* ************************************************************************* */
+
+/* ************ */
+/* MEDIA QUERYS */
+/* ************ */
+
+/* Media Query para pantallas 720p */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+
+.desktop_only {
+}
+
+/* *** CABEZAL *** */
+/*.cabezal_desktop_botonera {
+	padding-bottom: 0;
+	margin-top: -8px;
+}*/
+.cabezal_desktop_boton1 {
+	margin-left: 20px;
+}
+.cabezal_desktop_boton1s {
+	margin-left: 20px;
+}
+.cabezal_desktop_boton2 {
+	margin-left: 20px;
+}
+.icon_social {
+	margin-left: 15px;
+}
+.taurs_logo {
+	width: 70px;
+	text-align: left;
+	padding-left: 75px;
+	margin-left: 0;
+}
+
+/* *** HERO HEADER *** */
+.fullwidth {
+	margin: 15px 0 15px 0;
+}
+.herotext {
+	margin-top: 50vh;
+}
+
+/* *** TEXTOS *** */
+h1 {
+	font-size: 5.2em;
+	margin-bottom: -20px;
+}
+h2 {
+	font-size: 2.5em;
+	/*margin-bottom: -5px;*/
+}
+h3 {
+	font-size: 1.6em;
+	line-height: 1.4em;
+	margin-bottom: -30px;
+}
+h4 {
+	font-size: 1.4em;
+	line-height: 1.2em;
+}
+span {
+	font-size: 1em;
+	line-height: 1em;
+}
+p {
+	font-size: 1.1em;
+	line-height: 1.2em;
+	max-width: 520px;
+}
+a {
+	font-size: 1em;
+}
+
+/* *** HOME *** */
+.ribbons {
+	height: 35px;
+}
+.mitad_izq {
+	width: 50%;
+}
+.about_img {
+	width: 400px;
+	height: 400px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.game_img {
+	width: 400px;
+	height: 400px;
+}
+.awards_img {
+	width: 406px;
+	height: 406px;
+}
+.awards_img1 {
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 400px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.awards_img2 {
+	top: 3px;
+	left: 3px;
+	width: 400px;
+	height: 400px;
+}
+.img_pretraining {
+	width: 300px;
+	height: 300px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.img_posttraining {
+	width: 300px;
+	height: 300px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.training_arrow {
+	font-size: 3em;
+	line-height: 300px;
+	margin: 10px;
+}
+.training_text {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin: 10px 0 50px 0;
+}
+.roadmap_all {
+	margin-bottom: 60px;
+}
+.roadmap_left {
+	width: 500px;
+	height: 500px;
+}
+.roadmap_right {
+	width: 500px;
+	height: 500px;
+}
+.roadmap_module {
+	width: 250px;
+	height: 250px;
+}
+.FAQ_question_module {
+	border-top: 1px solid white;
+	padding-top: 15px;
+	margin-bottom: 0px;
+}
+.FAQ_question {
+	font-size: 1.2em;
+}
+.FAQ_question_arrow {
+	font-size: 1.6em;
+}
+.FAQ_answer {
+	font-size: 1em;
+}
+
+/* *** PIE *** */
+.justificado-end {
+	height: 5px;
+}
+.pie_socials {
+	margin-right: 15px;
+}
+.pie_powered {
+	margin-right: 15px;
+}
+.pie_harmony {
+	padding-left: 45px;
+	height: 30px;
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+.mobile_only {
+	display: none;
+}
+
+/* MY TAURS */
+.sliderleft {
+	font-size: 4em;
+}
+.sliderright {
+	font-size: 4em;
+}
+.sliderinfotraits {
+	width: 22%;
+}
+#infocontract {
+	width: 48%;
+}
+
+/* WALLET */
+.nowallet {
+	height: 500px;
+}
+
+}
+
+/* Media Query para pantallas medianas */
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+
+.wrapper {
+	width: 90%;
+}
+
+.desktop_only {
+}
+
+/* *** CABEZAL *** */
+.cabezal_desktop_botonera {
+	padding-bottom: 0;
+	margin-top: -8px;
+}
+.cabezal_desktop_boton1 {
+	font-size: 0.8em;
+	margin-left: 10px;
+}
+.cabezal_desktop_boton1s {
+	font-size: 0.8em;
+	margin-left: 10px;
+}
+.cabezal_desktop_boton2 {
+	display: none;
+}
+.icon_social {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	margin-bottom: -10px;
+}
+.cabezal_wallet640 {
+	display: inline-block;
+	background-image: url('../img/Wallet Icon.svg');	
+}
+.taurs_logo {
+	width: 60px;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 55px;
+	margin-left: 0;
+}
+
+/* *** HERO HEADER *** */
+.fullwidth {
+	margin: 10px 0 10px 0;
+}
+.herotext {
+	margin-top: 30vh;
+}
+
+/* *** TEXTOS *** */
+h1 {
+	font-size: 3.5em;
+	margin-bottom: -10px;
+}
+h2 {
+	font-size: 1.8em;
+	/*margin-bottom: -5px;*/
+}
+h3 {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	margin-bottom: -10px;
+}
+h4 {
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+span {
+	font-size: 1em;
+	line-height: 1em;
+}
+p {
+	font-size: 1em;
+	line-height: 1.2em;
+	max-width: 480px;
+}
+a {
+	font-size: 1em;
+}
+
+/* *** HOME *** */
+.ribbons {
+	height: 30px;
+}
+.mitad_izq {
+	width: 48%;
+}
+.about_img {
+	width: 300px;
+	height: 300px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.game_img {
+	width: 300px;
+	height: 300px;
+}
+.awards_img {
+	width: 306px;
+	height: 306px;
+}
+.awards_img1 {
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 300px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.awards_img2 {
+	top: 3px;
+	left: 3px;
+	width: 300px;
+	height: 300px;
+}
+.fondo2 {
+	background-position: center bottom;
+}
+.tercio {
+	display: block;
+	margin: 30px 0 0 0;
+}
+.dostercios {
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+.img_pretraining {
+	width: 250px;
+	height: 250px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.img_posttraining {
+	width: 250px;
+	height: 250px;
+	border: 3px solid #828282;
+	border-radius: 15px;
+}
+.training_arrow {
+	font-size: 3em;
+	line-height: 230px;
+	margin: 10px;
+}
+.training_text {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin: 10px 0 50px 0;
+}
+.roadmap_all {
+	width: 500px;
+	margin-bottom: 60px;
+}
+.roadmap_left {
+	width: 500px;
+	height: 500px;
+}
+.roadmap_right {
+	width: 500px;
+	height: 500px;
+}
+.roadmap_module {
+	width: 250px;
+	height: 250px;
+}
+.FAQ_question_module {
+	border-top: 1px solid white;
+	padding-top: 15px;
+	margin-bottom: 0px;
+}
+.FAQ_question {
+	max-width: 90%;
+	font-size: 1em;
+}
+.FAQ_question_arrow {
+	font-size: 1.6em;
+}
+.FAQ_answer {
+	font-size: 1em;
+}
+
+/* *** PIE *** */
+.modulo_pie {
+	width: 30%;
+}
+
+.mobile_only {
+	display: none;
+}
+
+/* MINT A TAUR */
+.minteo_img {
+	width: 220px;
+	height: 220px;
+	font-size: 10em;
+	line-height: 220px;
+	margin: 20px;
+	box-shadow: 0 0 25px black;
+}
+.mint_spacer {
+	margin-top: 25px;
+	margin-left: 40px;
+}
+.mint_x1 {
+	width: 200px;
+	background-color: #00072E;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 0 15px 0;
+	font-size: 1em;
+	line-height: 1.2em;
+	text-align: center;
+	cursor: pointer;
+}
+.mint_x2 {
+	width: 37px;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 5px 15px 5px;
+	font-size: 1em;
+	margin-right: 10px;
+}
+.mint_x5 {
+	width: 37px;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 5px 15px 5px;
+	font-size: 1em;
+	margin-right: 10px;
+}
+.mint_x10 {
+	width: 37px;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 5px 15px 5px;
+	font-size: 1em;
+}
+
+/* MY TAURS */
+.sliderleft {
+	font-size: 3em;
+}
+.sliderright {
+	font-size: 3em;
+}
+.slideritem {
+	border-radius: 15px;
+	border: 1px solid #909090;
+}
+.sliderinfotraits {
+	width: 28%;
+}
+#infocontract {
+	width: 56%;
+}
+.mytaurs_owned {
+	/*width: 60px;*/
+	height: 40px;
+	padding-left: 50px;
+	font-size: 1em;
+}
+.mytaurs_none {
+	padding-left: 0;
+}
+
+/* VIEW ALL */
+.result_module {
+	width: 23%;
+	padding: 25% 0 1% 10px;
+}
+.result_dummy {
+	width: 23%;
+}
+.result_popup_container {
+	width: 600px;
+	height: 300px;
+	border-radius: 10px;
+}
+.result_thumb {
+	width: 280px;
+	height: 280px;
+	border-radius: 5px;
+}
+.result_info {
+	width: 280px;
+	height: 280px;
+	line-height: 1em;
+}
+.resultinfotraits {
+	width: auto;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.no_desktop_small {
+	display: none;
+}
+
+/* WALLET */
+.nowallet {
+	height: 400px;
+}
+
+}
+
+/* Media Query para pantallas chicas */
+@media screen and (max-width: 640px) {
+
+.fondolaberinto {
+	background-size: cover;
+}
+
+.wrapper {
+	width: 90%;
+}
+.wrapperflex {
+	display: block;
+}
+
+/* *** CABEZAL *** */
+.desplegable_mobile {
+	display: block;
+	position: fixed;
+	left: 0;
+	width: 100vw;
+	z-index: 200;
+	background-color: #00072E;
+	text-align: center;
+	box-shadow: 0 50px 50px black;
+	-ms-transition: top 0.5s ease-out;
+	-webkit-transition: top 0.5s ease-out;
+	transition: top 0.5s ease-out;
+}
+.boton_cerrar {
+	display: block;
+	width: 80%;
+	padding: 10%;
+	color: white;
+	font-size: 1.5em;
+	text-align: right;
+}
+.cabezal_desktop_boton1 {
+	font-size: 1.2em;
+	text-align: center;
+	display: block;
+	margin: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid white;
+}
+.cabezal_desktop_boton1s {
+	font-size: 1.2em;
+	text-align: center;
+	display: block;
+	margin: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid white;
+}
+.cabezal_desktop_boton2 {
+	font-size: 1.2em;
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+	margin: 0 20px 40px 20px;
+}
+.icon_social {
+	width: 40px;
+	height: 40px;
+	margin: 0 20px 20px 20px;
+}
+.hamburguesa {
+	color: white;
+	position: absolute;
+	font-size: 1.5em;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+}
+.taurs_logo {
+	width: 50px;
+	height: 50px;
+}
+
+/* *** HERO HEADER *** */
+.fullwidth {
+	margin: 10px 0 10px 0;
+}
+.herotext {
+	margin-top: 50vh;
+}
+.boton {
+	border: 5px solid #C4C4C4;
+	font-size: 1em;
+}
+
+/* *** TEXTOS *** */
+h1 {
+	font-size: 2.5em;
+	margin-bottom: -20px;
+}
+h2 {
+	font-size: 2em;
+	margin-bottom: -5px;
+}
+h3 {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin-bottom: -20px;
+}
+h4 {
+	font-size: 1em;
+	line-height: 1.2em;
+}
+span {
+	font-size: 1em;
+	line-height: 1em;
+}
+p {
+	font-size: 1em;
+	line-height: 1.2em;
+	max-width: 320px;
+}
+a {
+	font-size: 1em;
+}
+
+/* *** HOME *** */
+.ribbons {
+	height: 20px;
+}
+.mitad_izq {
+	display: inline-block;
+	width: 100%;
+}
+.mitad_der {
+	display: inline-block;
+	width: 100%;
+}
+.mitad_der2 {
+	width: 100%;
+}
+.about_img {
+	width: 98%;
+	height: 250px;
+	border: 2px solid #828282;
+	border-radius: 10px;
+}
+.game_img {
+	width: 98%;
+	height: 250px;
+	background-size: 75% auto;
+}
+.awards_img {
+	width: 100%;
+	height: 254px;
+}
+.awards_img1 {
+	top: 0;
+	left: 0;
+	width: 98%;
+	height: 200px;
+	border: 2px solid #828282;
+	border-radius: 10px;
+}
+.awards_img2 {
+	top: 2px;
+	left: 2px;
+	width: 98%;
+	height: 250px;
+}
+.tercio {
+	display: block;
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+.dostercios {
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+.fondo2 {
+	background-position: center bottom;
+}
+.img_pretraining {
+	width: 100%;
+	height: 250px;
+	border: 2px solid #828282;
+	border-radius: 10px;
+}
+.img_posttraining {
+	width: 100%;
+	height: 250px;
+	border: 2px solid #828282;
+	border-radius: 10px;
+}
+.training_arrow {
+	display: block;
+	font-size: 3em;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+	transform: rotate(90deg);
+}
+.training_text {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin: 10px 0 50px 0;
+}
+.roadmap_all {
+	width: 250px;
+	margin-bottom: 60px;
+}
+.roadmap_left {
+	width: 250px;
+	height: 500px;
+	display: block;
+}
+.roadmap_right {
+	width: 250px;
+	height: 500px;
+	display: block;
+}
+.roadmap_module {
+	width: 250px;
+	height: 250px;
+}
+.FAQ_question_module {
+	border-top: 1px solid white;
+	padding-top: 15px;
+	margin-bottom: 5px;
+}
+.FAQ_question {
+	max-width: 90%;
+	font-size: 1em;
+}
+.FAQ_question_arrow {
+	font-size: 1.4em;
+}
+.FAQ_answer {
+	font-size: 1em;
+}
+.listed {
+	width: 60px;
+	height: 60px;
+}
+
+/* *** PIE *** */
+.justificado-end {
+	height: 5px;
+}
+.pie_contract {
+	font-size: 0.8em;
+	line-height: 1em;
+	margin-right: 0;
+	height: auto;
+	vertical-align: top;
+}
+.pie_socials {
+	display: block;
+	margin-right: 0;
+	height: auto;
+	vertical-align: top;
+	margin-top: 20px;
+}
+.pie_powered {
+	margin-right: 0;
+	height: 80px;
+	vertical-align: top;
+}
+.pie_harmony {
+	margin-left: 10px;
+	padding-left: 40px;
+	padding-top: 5px;
+	height: 25px;
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+
+.desktop_only {
+	display: none;
+}
+
+.mobile_only {
+	display: inline-block;
+}
+
+/* MINT A TAUR */
+.minteo_img {
+	width: 220px;
+	height: 220px;
+	font-size: 10em;
+	line-height: 220px;
+	margin: 0;
+	box-shadow: 0 0 25px black;
+}
+.mint_spacer {
+	margin-top: 30px;
+}
+.mint_x1 {
+	width: 200px;
+	background-color: #00072E;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 0 15px 0;
+	font-size: 1em;
+	line-height: 1.2em;
+	text-align: center;
+	cursor: pointer;
+}
+.mint_x2 {
+	width: 37px;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 5px 15px 5px;
+	font-size: 1em;
+	margin-right: 10px;
+}
+.mint_x5 {
+	width: 37px;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 5px 15px 5px;
+	font-size: 1em;
+	margin-right: 10px;
+}
+.mint_x10 {
+	width: 37px;
+	border: 7px solid #C4C4C4;
+	border-radius: 10px;
+	padding: 14px 5px 15px 5px;
+	font-size: 1em;
+}
+.minted_module {
+	width: 100%;
+}
+.minted_module img {
+	width: 50%;
+}
+
+/* MY TAURS */
+.mytaurs_header {
+	margin: 60px 5% 10px 5%;
+	width: 100%;
+	padding-bottom: 0;
+}
+.mytaurs_owned {
+	/*width: 70px;*/
+	height: 40px;
+	font-size: 1.2em;
+	line-height: 40px;
+	padding-left: 50px;
+	margin-bottom: 20px;
+}
+.mytaurs_none {
+	padding-left: 0;
+}
+.sliderleft {
+	width: 50px;
+	font-size: 4em;
+	line-height: 1.2em;
+}
+.sliderright {
+	width: 50px;
+	font-size: 4em;
+	line-height: 1.2em;
+}
+.slidercontainer {
+	width: 92vw;
+	height: 91vw;
+}
+.sliderbody {
+	height: 90vw;
+}
+.slidermodule {
+	height: 90vw;
+	line-height: 90vw;
+	margin-right: 1vw;
+}
+.slideritem {
+	border-radius: 10px;
+	border: 1px solid #909090;
+}
+.sliderinfocontainer {
+	width: 100%;
+	border-radius: 0;
+	border: none;
+	border-top: 2px solid #909090;
+	border-bottom: 2px solid #909090;
+	margin-top: -20px;
+	padding: 0 5px 5px 5px;
+	text-align: center;
+}
+.sliderinfonumbers {
+	display: inline-block;
+	width: auto;
+	margin-bottom: 20px;
+	padding-top: 32px;
+}
+.sliderinfotraits {
+	width: 40%;
+	font-size: 0.8em;
+	margin: 5px 5px 5px 5px;
+}
+#infocontract {
+	width: 100%;
+}
+
+/* VIEW ALL */
+.viewallslider_container {
+	height: 100vw;
+}
+.viewallslider_img {
+	width: 300vw;
+	height: 100vw;
+}
+.filtros {
+	padding: 10px 0 5px 0;
+}
+.filtros a {
+	margin-left: 10px;
+}
+.checkcontainer {
+	padding-left: 25px;
+	margin-bottom: 12px;
+}
+.checkmark {
+  height: 30px;
+  width: 30px;
+}
+.result_module {
+	width: 95%;
+	padding: 100% 0 1% 10px;
+}
+.result_dummy {
+	width: 95%;
+}
+.result_popup {
+	z-index: 150;
+}
+.result_popup_container {
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+	border: none;
+}
+.result_popup_close {
+	opacity: 0;
+}
+.result_thumb {
+	width: 100vw;
+	height: 100vw;
+	border-radius: 0;
+	margin: 0;
+}
+.result_info {
+	width: 90%;
+	height: 90%;
+	line-height: 1em;
+}
+.resultinfotraits {
+	width: auto;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+/* WALLET */
+.nowallet {
+	height: 200px;
+}
+
+}
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
